@@ -9,13 +9,13 @@ const Navbar = () => {
    console.log()
 
    return (
-      <nav className="h-16 px-4 fixed bg-gray w-full flex items-center justify-between">
+      <nav className="h-16 px-4 lg:px-16 fixed bg-gray w-full flex items-center justify-between z-10">
          <Link href="/">
             <span className="text-white text-sm">
                <Home />
             </span>
          </Link>
-         <div className="grid grid-cols-2 gap-4">
+         <div className="grid grid-cols-2 gap-4 lg:gap-8 lg:text-lg">
             <Link href="/projects">
                <span
                   className={
