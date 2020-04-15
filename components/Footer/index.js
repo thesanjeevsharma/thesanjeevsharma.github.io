@@ -16,7 +16,7 @@ const Footer = () => {
                backgroundColor="rgba(16,17,19,1)"
                iconSize="1"
                roundness="50%"
-               url="https://some-website.com/my-social-media-url"
+               url="https://github.com/thesanjeevsharma"
                size="50"
             />
             <SocialMediaIconsReact
@@ -28,7 +28,7 @@ const Footer = () => {
                backgroundColor="rgba(16,17,19,1)"
                iconSize="1"
                roundness="50%"
-               url="https://some-website.com/my-social-media-url"
+               url="https://linkedin.com/in/thesanjeevsharma"
                size="50"
             />
             <SocialMediaIconsReact
@@ -40,7 +40,7 @@ const Footer = () => {
                backgroundColor="rgba(16,17,19,1)"
                iconSize="1"
                roundness="50%"
-               url="https://some-website.com/my-social-media-url"
+               url="https://instagram.com/thesanjeevsharma"
                size="50"
             />
             <SocialMediaIconsReact
@@ -52,7 +52,7 @@ const Footer = () => {
                backgroundColor="rgba(16,17,19,1)"
                iconSize="1"
                roundness="50%"
-               url="https://some-website.com/my-social-media-url"
+               url="https://twitter.com/thesnjvsharma"
                size="50"
             />
          </div>
