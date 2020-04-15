@@ -5,7 +5,11 @@ const OtherStuff = () => {
          <p className="mb-4">
             I have not limited myself to just programming. When I am away from all this, I like to
             travel and film. I maintain a{' '}
-            <a href="" target="_blank" className="text-green-500">
+            <a
+               href="https://www.youtube.com/channel/UCqU81wknam157Se36rJLgTA"
+               target="_blank"
+               className="text-green-500"
+            >
                YouTube Channel
             </a>{' '}
             for the vlogs.
@@ -14,7 +18,11 @@ const OtherStuff = () => {
             Now, It's rare that I get time to travel and it's even more rare that I find a place I
             like {'(Me, very selective!)'}. So I find my escape from the world through VFX and 3D
             modelling. I upload some of the stuff on my{' '}
-            <a href="" target="_blank" className="text-green-500">
+            <a
+               href="https://www.instagram.com/thesanjeevsharma/"
+               target="_blank"
+               className="text-green-500"
+            >
                Instagram
             </a>
             .

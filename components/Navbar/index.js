@@ -1,8 +1,13 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 import { Home, Tv, Code } from '../../assets/icons'
 
 const Navbar = () => {
+   const router = useRouter()
+
+   console.log()
+
    return (
       <nav className="h-16 px-4 fixed bg-gray w-full flex items-center justify-between">
          <Link href="/">
@@ -12,10 +17,20 @@ const Navbar = () => {
          </Link>
          <div className="grid grid-cols-2 gap-4">
             <Link href="/projects">
-               <span className="text-white">Projects</span>
+               <span
+                  className={
+                     router.pathname.includes('projects') ? 'text-purple-400' : 'text-white'
+                  }
+               >
+                  Projects
+               </span>
             </Link>
             <Link href="/courses">
-               <span className="text-white">Courses</span>
+               <span
+                  className={router.pathname.includes('courses') ? 'text-green-400' : 'text-white'}
+               >
+                  Courses
+               </span>
             </Link>
          </div>
       </nav>
