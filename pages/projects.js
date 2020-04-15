@@ -46,8 +46,8 @@ const Projects = () => {
             <section className="py-16 text-white text-center py-16">
                <h1 className="text-4xl font-bold text-purple-400 mb-8">Projects</h1>
                <div className="grid grid-cols-1 gap-4 mb-8">
-                  {projects.map((project) => (
-                     <div className="bg-gray p-4 text-left flex flex-col rounded">
+                  {projects.map((project, index) => (
+                     <div key={index} className="bg-gray p-4 text-left flex flex-col rounded">
                         <span className="text-xl font-bold mb-2">{project.name}</span>
                         <span className="text-sm font-light mb-6">{project.description}</span>
                         {project.visit && (
@@ -69,8 +69,11 @@ const Projects = () => {
                            </a>
                         )}
                         <div className="flex">
-                           {project.tags.map((tag) => (
-                              <span className="p-1 bg-purple-400 mr-1 mb-1 text-sm rounded-sm font-medium">
+                           {project.tags.map((tag, index) => (
+                              <span
+                                 key={index}
+                                 className="p-1 bg-purple-400 mr-1 mb-1 text-sm rounded-sm font-medium"
+                              >
                                  {tag}
                               </span>
                            ))}

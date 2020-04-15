@@ -10,7 +10,7 @@ const OtherStuff = () => {
                target="_blank"
                className="text-green-500"
             >
-               YouTube Channel
+               YouTube channel
             </a>{' '}
             for the vlogs.
          </p>

@@ -30,10 +30,10 @@ const WorkEx = () => {
       <section className="py-8 text-white text-center">
          <h1 className="text-2xl font-bold text-purple-400 mb-8"> Work Experience</h1>
          <div className="flex flex-col">
-            {works.map((work) => (
-               <div className="bg-gray p-2 text-left flex flex-col mb-4">
+            {works.map((work, index) => (
+               <div key={index} className="bg-gray p-2 text-left flex flex-col mb-4 rounded">
                   <span className="font-semibold">{work.company}</span>
-                  <span className="text-xs mb-4 font-thin">{work.location}</span>
+                  <span className="text-xs mb-4 font-light">{work.location}</span>
                   <span className="text-purple-400">{work.title}</span>
                   <span className="text-sm">{work.duration}</span>
                </div>
