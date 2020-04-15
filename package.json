@@ -5,7 +5,8 @@
    "scripts": {
       "dev": "next dev",
       "build": "next build && next export",
-      "start": "next start"
+      "start": "next start",
+      "deploy": "rm -rf node_modules/.cache && rimraf out && next build && next export && touch out/.nojekyll && gh-pages -d out -t true"
    },
    "dependencies": {
       "next": "9.3.4",
