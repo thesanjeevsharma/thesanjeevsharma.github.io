@@ -27,14 +27,19 @@ const WorkEx = () => {
    ]
 
    return (
-      <section className="py-8 text-white text-center">
-         <h1 className="text-2xl font-bold text-purple-400 mb-8"> Work Experience</h1>
-         <div className="flex flex-col">
+      <section className="py-8 lg:py-32 text-white text-center">
+         <h1 className="text-2xl lg:text-4xl font-bold text-purple-400 mb-8 lg:mb-16">
+            {' '}
+            Work Experience
+         </h1>
+         <div className="grid grid-cols-1 gap-4 lg:grid-cols-4">
             {works.map((work, index) => (
-               <div key={index} className="bg-gray p-2 text-left flex flex-col mb-4 rounded">
-                  <span className="font-semibold">{work.company}</span>
-                  <span className="text-xs mb-4 font-light">{work.location}</span>
-                  <span className="text-purple-400">{work.title}</span>
+               <div key={index} className="bg-gray p-2 lg:p-4 text-left flex flex-col rounded">
+                  <span className="font-semibold lg:text-xl">{work.company}</span>
+                  <span className="text-xs lg:text-base mb-4 lg:mb-8 font-light">
+                     {work.location}
+                  </span>
+                  <span className="text-purple-400 lg:text-lg">{work.title}</span>
                   <span className="text-sm">{work.duration}</span>
                </div>
             ))}

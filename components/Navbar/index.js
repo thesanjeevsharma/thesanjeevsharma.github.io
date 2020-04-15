@@ -19,7 +19,9 @@ const Navbar = () => {
             <Link href="/projects">
                <span
                   className={
-                     router.pathname.includes('projects') ? 'text-purple-400' : 'text-white'
+                     router.pathname.includes('projects')
+                        ? 'text-purple-400'
+                        : 'text-white cursor-pointer hover:text-purple-400'
                   }
                >
                   Projects
@@ -27,7 +29,11 @@ const Navbar = () => {
             </Link>
             <Link href="/courses">
                <span
-                  className={router.pathname.includes('courses') ? 'text-green-400' : 'text-white'}
+                  className={
+                     router.pathname.includes('courses')
+                        ? 'text-green-400'
+                        : 'text-white cursor-pointer hover:text-green-400'
+                  }
                >
                   Courses
                </span>
