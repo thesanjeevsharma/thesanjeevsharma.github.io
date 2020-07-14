@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const WorkEx = () => {
    const works = [
       {
@@ -43,6 +45,11 @@ const WorkEx = () => {
                   <span className="text-sm">{work.duration}</span>
                </div>
             ))}
+         </div>
+         <div className="mt-16 text-center">
+            <Link href="/map">
+               <a className="hover:text-green-400">View on Map</a>
+            </Link>
          </div>
       </section>
    )
