@@ -34,7 +34,7 @@ const WorkEx = () => {
             {' '}
             Work Experience
          </h1>
-         <div className="grid grid-cols-1 gap-4 lg:grid-cols-4">
+         <div className="grid grid-cols-1 gap-4 mb-8 lg:grid-cols-4 lg:mb-16">
             {works.map((work, index) => (
                <div key={index} className="bg-gray p-2 lg:p-4 text-left flex flex-col rounded">
                   <span className="font-semibold lg:text-xl">{work.company}</span>
@@ -46,7 +46,7 @@ const WorkEx = () => {
                </div>
             ))}
          </div>
-         <div className="mt-16 text-center">
+         <div className="text-center">
             <Link href="/map">
                <a className="hover:text-green-400">View on Map</a>
             </Link>
