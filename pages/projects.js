@@ -4,6 +4,13 @@ import { Redirect } from '../assets/icons'
 const Projects = () => {
    const projects = [
       {
+         name: 'pwa-weather-app',
+         description: 'Same old weather app, but PWA!',
+         visit: 'https://weather-pw-app.netlify.app',
+         code: 'https://github.com/thesanjeevsharma/pwa-weather-app',
+         tags: ['React', 'PWA'],
+      },
+      {
          name: 'Mooon',
          description: 'Get anonymous feedback from others',
          visit: 'http://mooonme.herokuapp.com',
@@ -57,24 +64,26 @@ const Projects = () => {
                         <span className="text-sm lg:text-base font-light mb-6">
                            {project.description}
                         </span>
-                        {project.visit && (
-                           <a
-                              href={project.visit}
-                              target="_blank"
-                              className="text-purple-400 mr-4 mb-2 lg:mb-4 flex items-center"
-                           >
-                              <span className="mr-1">Visit</span> <Redirect color="#B794F4" />
-                           </a>
-                        )}
-                        {project.code && (
-                           <a
-                              href={project.code}
-                              target="_blank"
-                              className="text-purple-400 mr-4 mb-2 flex items-center"
-                           >
-                              <span className="mr-1">Code</span> <Redirect color="#B794F4" />
-                           </a>
-                        )}
+                        <div className="flex items-baseline">
+                           {project.visit && (
+                              <a
+                                 href={project.visit}
+                                 target="_blank"
+                                 className="text-purple-400 mr-4 mb-2 lg:mb-4 flex items-center"
+                              >
+                                 <span className="mr-1">Visit</span> <Redirect color="#B794F4" />
+                              </a>
+                           )}
+                           {project.code && (
+                              <a
+                                 href={project.code}
+                                 target="_blank"
+                                 className="text-purple-400 mr-4 mb-2 flex items-center"
+                              >
+                                 <span className="mr-1">Code</span> <Redirect color="#B794F4" />
+                              </a>
+                           )}
+                        </div>
                         <div className="flex">
                            {project.tags.map((tag, index) => (
                               <span
