@@ -18,7 +18,7 @@ const Navbar = () => {
                <span
                   className={
                      router.pathname.includes('projects')
-                        ? 'text-purple-400'
+                        ? 'text-purple-400 text-center'
                         : 'text-white text-center cursor-pointer hover:text-purple-400'
                   }
                >
@@ -29,7 +29,7 @@ const Navbar = () => {
                <span
                   className={
                      router.pathname.includes('blog')
-                        ? 'text-orange-400'
+                        ? 'text-orange-400 text-center'
                         : 'text-white text-center cursor-pointer hover:text-orange-400'
                   }
                >
@@ -40,7 +40,7 @@ const Navbar = () => {
                <span
                   className={
                      router.pathname.includes('courses')
-                        ? 'text-green-400'
+                        ? 'text-green-400 text-center'
                         : 'text-white text-center cursor-pointer hover:text-green-400'
                   }
                >
