@@ -10,7 +10,7 @@ const Blog = () => {
       },
       {
          title: 'Useful JS array methods to level up your game',
-         link: '',
+         link: 'https://dev.to/thesanjeevsharma/useful-js-array-methods-to-level-up-your-game-5am9',
          tags: ['javascript', 'array'],
       },
    ]
@@ -25,7 +25,7 @@ const Blog = () => {
                <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                   {articles.map((article) => (
                      <a href={article.link} target="_blank" key={article.title}>
-                        <div className="p-2 lg:py-6 lg:px-4 text-left border border-solid border-matte rounded cursor-pointer hover:border-orange-400">
+                        <div className="p-2 lg:py-6 lg:px-4 text-left border border-solid border-orange-100 rounded cursor-pointer hover:border-orange-400">
                            <h3 className="text-xl font-medium truncate mb-2">{article.title}</h3>
                            {article.tags.map((tag) => (
                               <span key={tag} className="bg-orange-400 mr-4 p-1 rounded">
