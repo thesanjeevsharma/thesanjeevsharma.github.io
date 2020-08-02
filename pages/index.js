@@ -56,11 +56,15 @@ const Home = () => {
                <h2 className="text-5xl font-bold mb-8">Hello,</h2>
                <h3 className="text-xl lg:text-2xl font-medium">I am</h3>
                <h1 className="text-3xl lg:text-6xl font-bold mb-8">Sanjeev Sharma</h1>
-               <p className="text-base lg:text-xl mb-32">
+               <p className="text-base lg:text-xl mb-8">
                   I am working as a <span className="text-green-400">Full stack developer</span> at
                   a startup in Bangalore, Karnataka(IN). My area of expertise is web technologies
                   but my knowledge is not limited to just that. {';)'}
                </p>
+               <img
+                  src="https://www.codewars.com/users/thesanjeevsharma/badges/large"
+                  className="mb-16"
+               />
             </section>
             <WorkEx />
             <OtherStuff />
