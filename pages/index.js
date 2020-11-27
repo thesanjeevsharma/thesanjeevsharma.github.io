@@ -52,7 +52,7 @@ const Home = () => {
                   retina_detect: true,
                }}
             />
-            <section className="h-screen py-16 lg:py-32 text-white text-left flex flex-col">
+            <section className="h-screen py-16 lg:py-32 text-white text-left flex flex-col justify-center">
                <h2 className="text-5xl font-bold mb-8">Hello,</h2>
                <h3 className="text-xl lg:text-2xl font-medium">I am</h3>
                <h1 className="text-3xl lg:text-6xl font-bold mb-8">Sanjeev Sharma</h1>
@@ -62,8 +62,8 @@ const Home = () => {
                   but my knowledge is not limited to just that. {';)'}
                </p>
                <img
-                  src="https://www.codewars.com/users/thesanjeevsharma/badges/large"
-                  className="mb-16"
+                  src="https://www.codewars.com/users/thesanjeevsharma/badges/micro"
+                  className="mb-16 w-48"
                />
             </section>
             <WorkEx />
