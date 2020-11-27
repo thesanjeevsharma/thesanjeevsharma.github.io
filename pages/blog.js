@@ -1,43 +1,64 @@
+import { fetchArticles } from '../api'
 import { Layout } from '../components'
-import Link from 'next/link'
 
 const Blog = () => {
-   const articles = [
-      {
-         title: 'useState Everywhere? Nope!',
-         link: 'https://dev.to/thesanjeevsharma/usestate-everywhere-nope-3g9h',
-         tags: ['webdev', 'optimization', 'react'],
-      },
-      {
-         title: 'Useful JS array methods to level up your game',
-         link: 'https://dev.to/thesanjeevsharma/useful-js-array-methods-to-level-up-your-game-5am9',
-         tags: ['javascript', 'array'],
-      },
-   ]
+   const [error, setError] = React.useState('')
+   const [loading, setLoading] = React.useState(true)
+   const [articles, setArticles] = React.useState([])
+
+   React.useEffect(() => {
+      ;(async () => {
+         try {
+            const { data, status } = await fetchArticles()
+            if (status === 200) {
+               setArticles(data)
+            } else {
+               throw Error('Sorry! Failed to fetch articles.')
+            }
+         } catch (err) {
+            console.log(err)
+            setError(err.message)
+         } finally {
+            setLoading(false)
+         }
+      })()
+   }, [])
 
    return (
       <Layout>
-         <React.Fragment>
+         <>
             <section className="min-h-screen py-16 text-white text-center">
                <h1 className="text-4xl lg:text-5xl font-bold text-orange-400 mb-8 lg:mb-16">
                   Blog
                </h1>
-               <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-                  {articles.map((article) => (
-                     <a href={article.link} target="_blank" key={article.title}>
-                        <div className="p-2 lg:py-6 lg:px-4 text-left border border-solid border-orange-100 rounded cursor-pointer hover:border-orange-400">
-                           <h3 className="text-xl font-medium truncate mb-2">{article.title}</h3>
-                           {article.tags.map((tag) => (
-                              <span key={tag} className="bg-orange-400 mr-4 p-1 rounded">
-                                 {`#${tag}`}
-                              </span>
+               {loading ? (
+                  <p> Hold on, fetching the good stuff... </p>
+               ) : (
+                  <>
+                     {Boolean(error) ? (
+                        <p> {error} </p>
+                     ) : (
+                        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
+                           {articles.map((article) => (
+                              <a href={article.url} target="_blank" key={article.title}>
+                                 <div className="p-2 lg:py-6 lg:px-4 text-left border border-solid border-orange-100 rounded cursor-pointer hover:border-orange-400">
+                                    <h3 className="text-xl font-medium truncate mb-2">
+                                       {article.title}
+                                    </h3>
+                                    {article.tag_list.map((tag) => (
+                                       <span key={tag} className="bg-orange-400 mr-4 p-1 rounded">
+                                          {tag}
+                                       </span>
+                                    ))}
+                                 </div>
+                              </a>
                            ))}
                         </div>
-                     </a>
-                  ))}
-               </div>
+                     )}
+                  </>
+               )}
             </section>
-         </React.Fragment>
+         </>
       </Layout>
    )
 }
