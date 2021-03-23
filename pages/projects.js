@@ -4,6 +4,48 @@ import { Redirect } from '../assets/icons'
 const Projects = () => {
    const projects = [
       {
+         name: 'polrr',
+         description: 'Climate change news from all sources (still in development)',
+         visit: 'https://polrr-news.herokuapp.com',
+         code: 'https://github.com/thesanjeevsharma/polrr',
+         tags: ['React', 'Typescript', 'redux-toolkit'],
+      },
+      {
+         name: 'snapy',
+         description: 'Snapchat clone',
+         visit: '',
+         code: 'https://github.com/thesanjeevsharma/snapy',
+         tags: ['React', 'redux-toolkit'],
+      },
+      {
+         name: 'valorant-game-info',
+         description: 'Valorant agents app',
+         visit: 'https://valorant-game-info.netlify.app/',
+         code: 'https://github.com/thesanjeevsharma/valorant-game-info',
+         tags: ['React', 'Typescript', 'SCSS'],
+      },
+      {
+         name: 'travel-log',
+         description: 'Writing bad code while learning about maps.',
+         visit: '',
+         code: 'https://github.com/thesanjeevsharma/travel-log',
+         tags: ['React', 'NodeJS', 'react-map-gl'],
+      },
+      {
+         name: 'break-timer',
+         description: 'Pomodoro clock desktop app.',
+         visit: '',
+         code: 'https://github.com/thesanjeevsharma/break-timer',
+         tags: ['HTML', 'CSS', 'VanillaJS', 'Electron'],
+      },
+      {
+         name: 'death-to-ie11',
+         description: 'Made UI for this website.',
+         visit: 'https://death-to-ie11.com/',
+         code: 'https://github.com/gabLaroche/death-to-ie11',
+         tags: ['HTML', 'CSS', 'VanillaJS'],
+      },
+      {
          name: 'pwa-weather-app',
          description: 'Same old weather app, but PWA!',
          visit: 'https://weather-pw-app.netlify.app',
