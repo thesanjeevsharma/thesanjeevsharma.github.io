@@ -45,11 +45,13 @@ const Blog = () => {
                                     <h3 className="text-xl font-medium truncate mb-2">
                                        {article.title}
                                     </h3>
-                                    {article.tag_list.map((tag) => (
-                                       <span key={tag} className="bg-orange-400 mr-4 p-1 rounded">
-                                          {tag}
-                                       </span>
-                                    ))}
+                                    <div className="flex flex-wrap">
+                                       {article.tag_list.map((tag) => (
+                                          <span key={tag} className="bg-orange-400 m-1 p-1 rounded">
+                                             {tag}
+                                          </span>
+                                       ))}
+                                    </div>
                                  </div>
                               </a>
                            ))}
