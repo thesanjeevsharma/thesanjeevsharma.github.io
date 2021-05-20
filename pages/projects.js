@@ -6,7 +6,7 @@ const Projects = () => {
       {
          name: 'polrr',
          description: 'Climate change news from all sources (still in development)',
-         visit: 'https://polrr-news.herokuapp.com',
+         visit: 'http://polrr.news',
          code: 'https://github.com/thesanjeevsharma/polrr',
          tags: ['React', 'Typescript', 'redux-toolkit'],
       },
