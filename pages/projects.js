@@ -145,4 +145,8 @@ const Projects = () => {
    )
 }
 
+export async function getStaticProps() {
+   return { props: {} }
+}
+
 export default Projects

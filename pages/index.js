@@ -5,7 +5,7 @@ import { Layout, OtherStuff, WorkEx } from '../components'
 const Home = () => {
    return (
       <Layout>
-         <React.Fragment>
+         <>
             <Particles
                className="absolute inset-0 z-0"
                params={{
@@ -68,9 +68,13 @@ const Home = () => {
             </section>
             <WorkEx />
             <OtherStuff />
-         </React.Fragment>
+         </>
       </Layout>
    )
+}
+
+export async function getStaticProps() {
+   return { props: {} }
 }
 
 export default Home

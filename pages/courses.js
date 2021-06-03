@@ -1,7 +1,14 @@
+import Image from 'next/image'
+
 import { Layout } from '../components'
 
 const Courses = () => {
    const courses = [
+      {
+         title: 'Build a Read-O-Meter Clone',
+         link: 'https://www.youtube.com/watch?v=8JeKHZR3NeU',
+         img: '/img/read-o-meter.png',
+      },
       {
          title: 'ReactJS A-Z',
          link:
@@ -65,7 +72,7 @@ const Courses = () => {
                         className="border border-solid border-green-400 rounded overflow-hidden"
                         key={course.title}
                      >
-                        <img src={course.img} />
+                        <Image src={course.img} alt={course.title} width={500} height={280} />
                         <h3 className="p-4 font-semibold hover:bg-green-600">{course.title}</h3>
                      </a>
                   ))}
@@ -74,6 +81,10 @@ const Courses = () => {
          </React.Fragment>
       </Layout>
    )
+}
+
+export async function getStaticProps() {
+   return { props: {} }
 }
 
 export default Courses
